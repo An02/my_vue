@@ -3,9 +3,11 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+// 全局引入element UI 组件
+import ElementUI from 'element-ui'
 
 Vue.config.productionTip = false
-
+Vue.use(ElementUI)
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
