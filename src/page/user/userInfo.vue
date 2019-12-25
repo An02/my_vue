@@ -117,13 +117,15 @@
         </el-aside>
       </div>
       <el-main>
-        你好！！
+        <el-button size="small" type="primary" icon="el-icon-document"  @click="select">测试
+        </el-button>
       </el-main>
     </el-container>
   </el-container>
 </template>
 
 <script>
+import {userApi} from '@/service/user_api'
 export default {
   name: 'HelloWorld',
   data () {
@@ -131,7 +133,10 @@ export default {
       msg: 'Welcome to Your Vue.js App',
       activeIndex: '1',
       menu_key: '1',
-      activeIndex2: '1'
+      activeIndex2: '1',
+      query: {
+        id: '1'
+      }
     }
   },
   methods: {
@@ -145,6 +150,12 @@ export default {
       this.menu_key = key
       console.log(key)
       console.log(keyPath)
+    },
+    select () {
+      debugger
+      userApi.getUserInfo(this.query).then(res => {
+        console.log('进入请求结果！！！')
+      })
     }
   }
 }

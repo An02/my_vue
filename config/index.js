@@ -10,7 +10,16 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+    // 跨域反向代理
+    proxyTable: {
+      '/api': {
+        target: 'http://hhj.ssm.com:8086',
+        changeOrigin: true,
+        pathRewrite: {
+          '^/api/': '/ssm_start/ssm/'
+        }
+      }
+    },
 
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST
