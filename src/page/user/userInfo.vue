@@ -119,6 +119,8 @@
       <el-main>
         <el-button size="small" type="primary" icon="el-icon-document"  @click="select">测试
         </el-button>
+        <el-button size="small" type="primary" icon="el-icon-document"  @click="exportMeThod">导出模板
+        </el-button>
       </el-main>
     </el-container>
   </el-container>
@@ -152,10 +154,12 @@ export default {
       console.log(keyPath)
     },
     select () {
-      debugger
       userApi.getUserInfo(this.query).then(res => {
         console.log('进入请求结果！！！')
       })
+    },
+    exportMeThod () {
+      window.open('api/user/export.do')
     }
   }
 }

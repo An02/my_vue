@@ -9,6 +9,16 @@ const USER = [
     path: '/user/main',
     name: 'main页面',
     component: require('@/page/main/main.vue').default
+  },
+  {
+    path: '/user/batch',
+    name: '批量页面',
+    component: require('@/page/user/batch.vue').default
+  },
+  {
+    path: '/user/batchModel',
+    name: '批量页面',
+    component: require('@/page/user/batchModel.vue').default
   }
 ]
 export default USER

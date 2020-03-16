@@ -1,5 +1,6 @@
-import service from '../util/request'
+import { request } from '../util/request'
 
 export const userApi = {
-  getUserInfo: (query) => service.post('user/getUserInfo', query)
+  getUserInfo: (query) => request('user/testEvent', query, 'post'),
+  exportMethod: (query) => request('user/export', query, 'post')
 }

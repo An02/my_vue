@@ -13,10 +13,10 @@ module.exports = {
     // 跨域反向代理
     proxyTable: {
       '/api': {
-        target: 'http://hhj.ssm.com:8086',
+        target: 'http://hhj.ssm.com:8087/TestSSM/ssm/',
         changeOrigin: true,
         pathRewrite: {
-          '^/api/': '/ssm_start/ssm/'
+          '^/api/': ''
         }
       }
     },
